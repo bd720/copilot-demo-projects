@@ -1,0 +1,9 @@
+com\example\configuration\RestTemplateConfiguration.class
+com\example\model\WeatherModeData.class
+com\example\App.class
+com\example\SpringbootApp.class
+com\example\component\WeatherApiCaller.class
+com\Demo.class
+com\example\component\GlobalExceptionHandler.class
+com\example\web\rest\WeatcherDataController.class
+com\example\web\rest\SampleDataController.class

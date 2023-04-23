@@ -1,0 +1,8 @@
+#setup springboot app name and run with random port
+spring:
+  application:
+    name: demo-springboot-api
+  profiles:
+    active: dev
+server:
+  port: 0 

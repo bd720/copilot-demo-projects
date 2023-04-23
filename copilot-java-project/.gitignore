@@ -1,0 +1,9 @@
+#ignore for java project
+#ignore logs
+*.log
+#ignore logs folder
+logs/
+#ignore class
+*.class
+#ignore vscode settings
+.vscode/
