@@ -5,3 +5,6 @@
 port=12055
 #open chrome browser and visit the web api against given port
 start chrome http://localhost:$port/api/v1/demo-springboot-api
+#open chrome browser and visit the 'getweather' web api against given port
+start chrome http://localhost:$port/api/v1/demo-springboot-api/getweather
+# start chrome http://localhost:$port//getweather //
