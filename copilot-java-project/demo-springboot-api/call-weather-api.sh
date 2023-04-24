@@ -4,8 +4,8 @@
 api=https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13
 #define var 'host' and assign value 'weatherapi-com.p.rapidapi.com'
 host=weatherapi-com.p.rapidapi.com
-#define var 'apiKey' and assign value "400140833amshfb9a21e89780f42p166237jsnf94a97cce784
-apiKey=400140833amshfb9a21e89780f42p166237jsnf94a97cce784
+#get apiKey from environment variable
+apiKey=$RAPIDAPI_KEY
 #define var 'contentType' and assign value 'application/octet-stream'
 contentType=application/octet-stream
 #use curl to get the api with all 3 headers from values above

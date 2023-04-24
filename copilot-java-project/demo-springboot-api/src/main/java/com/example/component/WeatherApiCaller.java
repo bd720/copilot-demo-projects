@@ -32,9 +32,10 @@ public class WeatherApiCaller {
         // call weather api with rest template with 3 headers
         // return the result
         String api = "https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13";
-        // first header is 'X-RapidAPI-Key' value is
-        // "400140833amshfb9a21e89780f42p166237jsnf94a97cce784"
+        // first header is 'X-RapidAPI-Key' , get value from environment variable 'RAPID_API_KEY'
         String firstHeader = "X-RapidAPI-Key";
+        // create a variable apiKey with value from environment variable 'RAPID_API_KEY'
+        String apiKey = System.getenv("RAPID_API_KEY");
         // second header is '"X-RapidAPI-Host' value is "weatherapi-com.p.rapidapi.com"
         String secondHeader = "X-RapidAPI-Host";
         // thrid header is 'Content-Type' value is 'application/octet-stream'
@@ -42,17 +43,17 @@ public class WeatherApiCaller {
         // use rest template to call api with 3 headers , method is get
         // return the result
         // return restTemplate.getForObject(api, String.class, firstHeader,
-        // "400140833amshfb9a21e89780f42p166237jsnf94a97cce784", secondHeader,
+        // apiKey, secondHeader,
         // "weatherapi-com.p.rapidapi.com");
         // use rest template exchange method to call api with 3 headers , method is get
         // create a request entity with the 3 headers on above
         // RequestEntity requestEntity = RequestEntity.get(api)
-        // .header(firstHeader, "400140833amshfb9a21e89780f42p166237jsnf94a97cce784")
+        // .header(firstHeader, apiKey)
         // .header(secondHeader, "weatherapi-com.p.rapidapi.com").header(thirdHeader,
         // "application/octet-stream")
         // .build();
         RequestEntity requestEntity = RequestEntity.get(URI.create(api))
-                .header(firstHeader, "400140833amshfb9a21e89780f42p166237jsnf94a97cce784")
+                .header(firstHeader, apiKey)
                 .header(secondHeader, "weatherapi-com.p.rapidapi.com").header(thirdHeader, "application/octet-stream")
                 .build();
         return restTemplate.exchange(requestEntity, String.class).getBody();
