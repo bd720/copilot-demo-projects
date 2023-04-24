@@ -5,7 +5,13 @@ package com;
  */
 import org.springframework.boot.SpringApplication;//need to type in import
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+//enable swagger and ui
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+@EnableSwagger2
+//allow cors for all
+@CrossOrigin(origins = "*")
 @SpringBootApplication
 public class Demo {
     //create springboot app main method

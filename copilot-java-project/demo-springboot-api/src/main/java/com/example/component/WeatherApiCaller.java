@@ -7,6 +7,8 @@ import org.springframework.http.RequestEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import com.example.model.WeatherData;
+
 //create a component to call weather api
 @Component
 public class WeatherApiCaller {
@@ -57,5 +59,16 @@ public class WeatherApiCaller {
         // return
         // restTemplate.getForObject("https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13",
         // String.class);
+    }
+
+    // auto inject a weather data parser
+    @Autowired
+    private WeatherDataParser weatherDataParser;
+    public WeatherData callWeatherApiAndParse() {
+        // call weather api with rest template
+        // parse the result
+        // return the result
+        String result = callW();
+        return weatherDataParser.parseWeatherData(result);
     }
 }
