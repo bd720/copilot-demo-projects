@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bigdata.demo</groupId>
+  <artifactId>bigdata-demo-rw</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>bigdata-demo-rw</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+    <!--set compiler source and target on java 1.8 -->
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <!-- define property spark.versin  with value 2.3.0 -->
+    <spark.version>3.4.0</spark.version>
+    <scala.version>2.12.2</scala.version>
+    <scala.binary.version>2.12</scala.binary.version>
+    <!-- define properties spark.lib.scope with value 'compile'-->
+    <spark.lib.scope>compile</spark.lib.scope>
+  </properties>
+  <dependencies>
+  <!-- make spark2 available for this project with scope 'spark.lib.scope' and scala binary version  -->
+  
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-core_2.12</artifactId>
+      <version>${spark.version}</version>
+      <scope>${spark.lib.scope}</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-sql_2.12</artifactId>
+      <version>${spark.version}</version>
+      <scope>${spark.lib.scope}</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-hive_2.12</artifactId>
+      <version>${spark.version}</version>
+      <scope>${spark.lib.scope}</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-mllib_2.12</artifactId>
+      <version>${spark.version}</version>
+      <scope>${spark.lib.scope}</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-streaming_2.12</artifactId>
+      <version>${spark.version}</version>
+      <scope>${spark.lib.scope}</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-graphx_2.12</artifactId>
+      <version>${spark.version}</version>
+      <scope>${spark.lib.scope}</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-catalyst_2.12</artifactId>
+      <version>${spark.version}</version>
+      <scope>${spark.lib.scope}</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-tags_2.12</artifactId>
+      <version>${spark.version}</version>
+      <scope>${spark.lib.scope}</scope>
+    </dependency>
+  <!--make scala available for this project-->
+  <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
