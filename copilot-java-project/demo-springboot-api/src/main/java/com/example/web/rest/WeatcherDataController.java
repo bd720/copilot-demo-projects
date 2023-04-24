@@ -1,5 +1,6 @@
 package com.example.web.rest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 //create web api controller
@@ -12,6 +13,9 @@ import com.example.service.WeatherDataService;
 
 //add logger
 import lombok.extern.slf4j.Slf4j;
+
+// allow cors request
+@CrossOrigin(origins = "*")
 @Slf4j
 @RestController
 public class WeatcherDataController {
