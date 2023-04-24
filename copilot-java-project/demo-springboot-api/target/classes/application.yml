@@ -1,0 +1,15 @@
+#setup springboot app name and port
+spring:
+  application:
+    name: demo-springboot-api
+server:
+  # port: 18081
+  # set port to random port
+  # port: 0
+  port: ${PORT:12055}
+
+#setup springboot app logging 
+logging:
+  level:
+    com.example.demo: DEBUG
+  file: logs/demo-springboot-api.log
