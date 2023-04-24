@@ -21,7 +21,7 @@ class WeatherWidget extends React.Component {
              //log the response data to the console
             console.log(response.data);
             // update the state with the response data
-            this.setState({city: response.data.name, temperature: response.data.main.temp, Date: response.data.dt});
+            this.setState({city: response.data.city, temperature: response.data.temperature, Date: response.data.date});
           
         })
         .catch(error => {
